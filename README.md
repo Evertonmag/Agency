@@ -1,5 +1,5 @@
 # Agency
-Projeto de estudo feito com SASS utilizando conceitos iniciais em SASS para a execuçãop de um projeto com design bonito, intuitivo e responsivo
+Projeto de estudo feito com SASS utilizando conceitos iniciais em SASS para a execução de um projeto com design bonito, intuitivo e responsivo
 
 ## Projeto
 
