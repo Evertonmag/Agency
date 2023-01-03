@@ -23,35 +23,24 @@
     <!-- Cabeçalho -->
     <header id="main-banner">
         <div class="nav-container">
-            <a href="#" class="brand">
+            <a href="/" class="brand">
                 <i class="fas fa-brain"></i> Agency
             </a>
-            <!-- Navegação -->
-            <nav>
-                <ul class="nav-container-navbar">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Servicos</a>
-                    </li>
-                    <li>
-                        <a href="#">Contato</a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-primary">Entrar</a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn">Registrar</a>
-                    </li>
-                </ul>
-            </nav>
-            <i class="fas fa-bars"></i>
+            <div class="topnav" id="myTopnav">
+                <a href="/">Home</a>
+                <a href="#">Servicos</a>
+                <a href="contact.html">Contato</a>
+                <a href="#" class="btn btn-primary">Entrar</a>
+                <a href="#" class="btn">Registrar</a>
+                <a href="javascript:void(0);" class="icon" onclick="clickMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
         <div class="title-container">
             <h2>Nós desenvolvemos</h2>
             <h1>Poderosas Experiências</h1>
-            <a href="#" class="btn btn-primary btn-rounded">Fazer Orçamento</a>
+            <a href="contact.html" class="btn btn-primary btn-rounded">Fazer Orçamento</a>
         </div>
     </header>
     <!-- Seviços -->
@@ -232,6 +221,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function clickMenu() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>

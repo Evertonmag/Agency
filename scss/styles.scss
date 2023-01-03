@@ -44,28 +44,51 @@
             @include main-hover;
         }
 
-        &-navbar {
-            display: flex;
-            align-items: center;
-            height: 100%;
+        .topnav {
+            overflow: hidden;
+        }
 
-            li {
-                margin: 5px 10px;
+        .topnav a {
+            float: left;
+            display: block;
+            color: $light-color;
+            text-align: center;
+            padding: 14px 16px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            font-size: 17px;
 
-                a {
-                    color: $light-color;
-                    @include main-hover;
-                }
+            @include main-hover;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @include mobile {
+            .topnav a {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
             }
         }
 
-        .fas.fa-bars {
-            font-size: 2rem;
-            color: #fff;
-            display: none;
-
-            @include mobile {
+        @include mobile {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0px;
+            }
+            .topnav.responsive a {
+                float: none;
                 display: block;
+                text-align: left;
             }
         }
     }
@@ -91,6 +114,10 @@
             font-size: 4rem;
             margin-top: 1rem;
             @extend %title-text-shadow;
+        }
+
+        .fa-brands {
+            margin-right: 1rem;
         }
     }
 }
@@ -390,6 +417,54 @@ footer {
 
         p {
             margin-bottom: 1rem;
+        }
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        width: 50%;
+        margin: 2rem;
+        text-align: center;
+        padding: 1.5rem;
+        box-shadow: 0 1px 10px #ccc;
+
+        @include mobile {
+            width: 80%;
+            margin: 2rem;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+        }
+
+        label span {
+            margin-bottom: 0.3em;
+            font-weight: bold;
+            text-align: left;
+            font-family: "Lato";
+        }
+
+        input,
+        textarea {
+            box-sizing: border-box;
+            padding: 0.8rem 0;
+            border: none;
+            background-color: transparent;
+        }
+
+        input {
+            border-bottom: 1px solid #ccc;
+        }
+
+        textarea {
+            border: 1px solid #ccc;
         }
     }
 }

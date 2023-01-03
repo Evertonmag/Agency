@@ -33,7 +33,7 @@
 
 // responsividade
 @mixin mobile {
-    @media (max-width: 425px) {
+    @media (max-width: 804px) {
         @content;
     }
 }
@@ -108,10 +108,16 @@
     &-rounded {
         margin-top: 1rem;
         border-radius: 2rem;
-        padding: 1rem 1.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
 
         @include mobile {
-            padding: 1.3rem 1rem;
+            font-size: 1rem;
+            padding: 1.5rem 1.5rem;
         }
+    }
+
+    &-lg {
+        width: 80%;
     }
 }
