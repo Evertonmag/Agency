@@ -7,6 +7,20 @@
         font-family: "lato";
     }
 
+    body::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #ccc;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 20px;
+        border: 10px dotted #aaa;
+    }
+
     a {
         text-decoration: none;
     }
@@ -113,7 +127,7 @@
 
         @include mobile {
             font-size: 1rem;
-            padding: 1.5rem 1.5rem;
+            padding: 1rem 0.8rem;
         }
     }
 
