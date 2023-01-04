@@ -4,7 +4,7 @@
 @include reset;
 
 #main-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/office.jpg");
+    background: linear-gradient($black-transparent, $black-transparent), url("../img/office.jpg");
     height: 85vh;
     background-size: cover;
     background-position: center;
@@ -65,13 +65,18 @@ nav {
     z-index: 10;
 
     @include mobile {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .brand {
         color: $light-color;
         font-size: 2rem;
         @include main-hover;
+
+        @include mobile {
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
     }
 
     .topnav {
@@ -146,7 +151,7 @@ nav {
             width: 30%;
             margin: 1%;
             padding: 2rem;
-            border: 1px solid #ccc;
+            border: 1px solid $light-gray;
             transition: 0.3s;
 
             @include tablets {
@@ -202,7 +207,7 @@ nav {
 
             &:hover {
                 border-color: transparent;
-                box-shadow: 0 1px 10px #ccc;
+                box-shadow: 0 1px 10px $light-gray;
             }
         }
     }
@@ -307,13 +312,13 @@ nav {
             width: 100%;
             height: 100%;
             padding-top: 1.75rem;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: $black-transparent;
             border: 3px solid $primary-color;
         }
 
         .job-card-title {
             text-align: center;
-            color: #fff;
+            color: $light-color;
             font-weight: bold;
             font-size: 2.2rem;
             transition: 0.5s;
@@ -321,7 +326,7 @@ nav {
 
         .job-card-description {
             text-align: center;
-            color: #fff;
+            color: $light-color;
             padding: 1rem;
             font-size: 0.9rem;
 
@@ -352,7 +357,7 @@ footer {
         }
 
         .footer-title {
-            color: #fff;
+            color: $light-color;
             font-weight: bold;
             margin-bottom: 1rem;
         }
@@ -402,7 +407,7 @@ footer {
                     transition: 0.5s;
 
                     &:hover {
-                        color: #fff;
+                        color: $light-color;
                     }
                 }
             }
@@ -429,45 +434,8 @@ footer {
     align-items: center;
 
     form {
-        width: 50%;
-        margin: 2rem;
-        text-align: center;
-        padding: 1.5rem;
-        box-shadow: 0 1px 10px #ccc;
-
-        @include mobile {
-            width: 80%;
-            margin: 2rem;
-        }
-
-        label {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1em;
-        }
-
-        label span {
-            margin-bottom: 0.3em;
-            font-weight: bold;
-            text-align: left;
-            font-family: "Lato";
-        }
-
-        input,
-        textarea {
-            box-sizing: border-box;
-            padding: 0.8rem 0;
-            border: none;
-            background-color: transparent;
-        }
-
-        input {
-            border-bottom: 1px solid #ccc;
-        }
-
-        textarea {
-            border: 1px solid #ccc;
-        }
+        @extend %form-base;
+        box-shadow: 0 1px 10px $light-gray;
     }
 }
 
@@ -513,7 +481,7 @@ footer {
             justify-content: space-between;
 
             .table {
-                background: #fff;
+                background: $light-color;
                 width: 90%;
                 position: relative;
                 box-shadow: 0 1px 10px #aaa;
@@ -535,7 +503,7 @@ footer {
                     justify-content: center;
 
                     p {
-                        color: #fff;
+                        color: $light-color;
 
                         .text .cents {
                             font-size: 15px;
@@ -584,7 +552,7 @@ footer {
                         left: 50%;
                         font-size: 25px;
                         font-weight: 500;
-                        background: #fff;
+                        background: $light-color;
                         padding: 0 15px;
                         transform: translate(-50%, -50%);
                     }
@@ -618,7 +586,7 @@ footer {
                     button {
                         width: 80%;
                         height: 50px;
-                        color: #fff;
+                        color: $light-color;
                         font-size: 20px;
                         font-weight: 500;
                         border: none;
@@ -668,7 +636,7 @@ footer {
                         width: 200px;
                         background: $primary-color;
                         padding: 10px 0;
-                        color: #fff;
+                        color: $light-color;
                         text-align: center;
                         font-size: 14px;
                         font-weight: 600;
@@ -688,17 +656,17 @@ footer {
 
                 .button-purchase button {
                     border: 2px solid $color-basic;
-                    background: #fff;
+                    background: $light-color;
                     color: $color-basic;
 
                     &:hover {
                         background: $color-basic;
-                        color: #fff;
+                        color: $light-color;
                     }
                 }
 
                 .package-name {
-                    background: #ffecb3;
+                    background: rgba($color: $color-basic, $alpha: 0.2);
 
                     &::before {
                         content: "Basic";
@@ -716,17 +684,17 @@ footer {
 
                 .button-purchase button {
                     border: 2px solid $color-premium;
-                    background: #fff;
+                    background: $light-color;
                     color: $color-premium;
 
                     &:hover {
                         background: $color-premium;
-                        color: #fff;
+                        color: $light-color;
                     }
                 }
 
                 .package-name {
-                    background: #ffecb3;
+                    background: rgba($color: $color-premium, $alpha: 0.2);
 
                     &::before {
                         content: "Premium";
@@ -745,17 +713,17 @@ footer {
 
                 .button-purchase button {
                     border: 2px solid $color-ultimate;
-                    background: #fff;
+                    background: $light-color;
                     color: $color-ultimate;
 
                     &:hover {
                         background: $color-ultimate;
-                        color: #fff;
+                        color: $light-color;
                     }
                 }
 
                 .package-name {
-                    background: #ffecb3;
+                    background: rgba($color: $color-ultimate, $alpha: 0.2);
 
                     &::before {
                         content: "Ultimate";
@@ -804,12 +772,11 @@ footer {
             }
 
             form {
+                @extend %form-base;
                 width: 80%;
                 margin: 0 auto;
                 margin-top: 1rem;
-                text-align: center;
-                padding: 1.5rem;
-                box-shadow: 0 1px 10px #ccc;
+                box-shadow: 0 1px 10px $light-gray;
 
                 @include responsive-personalized(1500px) {
                     width: 90%;
@@ -822,34 +789,6 @@ footer {
                 @include mobile {
                     width: 95%;
                     margin: 0;
-                }
-
-                label {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 1em;
-                }
-
-                label span {
-                    margin-bottom: 0.3em;
-                    font-weight: bold;
-                    text-align: left;
-                    font-family: "Lato";
-                }
-
-                input {
-                    box-sizing: border-box;
-                    padding: 0.8rem 0;
-                    border: none;
-                    background-color: transparent;
-                }
-
-                input {
-                    border-bottom: 1px solid #ccc;
-                }
-
-                textarea {
-                    border: 1px solid #ccc;
                 }
             }
         }
@@ -909,6 +848,48 @@ footer {
             .btn {
                 margin: 1rem auto;
                 width: 70%;
+            }
+        }
+    }
+}
+
+.login-container,
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($black-transparent, $black-transparent), url("../img/office.jpg");
+    background-size: cover;
+    background-position: center;
+
+    form {
+        @extend %form-base;
+        background-color: $light-color;
+        box-shadow: 0 1px 10px $dark-gray;
+        border-radius: 1rem;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        p {
+            margin-top: 1.5rem;
+            font-size: 1.3rem;
+
+            @include mobile {
+                font-size: 1rem;
+            }
+
+            a {
+                color: $primary-color;
+                font-weight: bold;
             }
         }
     }

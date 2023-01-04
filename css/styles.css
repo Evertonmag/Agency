@@ -13,6 +13,53 @@
   background-position: center;
 }
 
+.login-container form,
+.cadastro-container form, .service-information-container .tela-divided .form-service form, .contact-container form {
+  width: 50%;
+  margin: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+@media (max-width: 825px) {
+  .login-container form,
+  .cadastro-container form, .service-information-container .tela-divided .form-service form, .contact-container form {
+    width: 80%;
+    margin: 2rem;
+  }
+}
+.login-container form label,
+.cadastro-container form label, .service-information-container .tela-divided .form-service form label, .contact-container form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.login-container form label span,
+.cadastro-container form label span, .service-information-container .tela-divided .form-service form label span, .contact-container form label span {
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Lato";
+}
+.login-container form input,
+.cadastro-container form input, .service-information-container .tela-divided .form-service form input, .contact-container form input,
+.login-container form textarea,
+.cadastro-container form textarea,
+.service-information-container .tela-divided .form-service form textarea,
+.contact-container form textarea {
+  box-sizing: border-box;
+  padding: 0.8rem 0;
+  border: none;
+  background-color: transparent;
+}
+.login-container form input,
+.cadastro-container form input, .service-information-container .tela-divided .form-service form input, .contact-container form input {
+  border-bottom: 1px solid #ccc;
+}
+.login-container form textarea,
+.cadastro-container form textarea, .service-information-container .tela-divided .form-service form textarea, .contact-container form textarea {
+  border: 1px solid #ccc;
+}
+
 .jobs-container .jobs-list .other-jobs-container .job-card .job-card-title, .jobs-container .jobs-list .first-job .job-card-title,
 .jobs-container .jobs-list .other-jobs-container .job-card .job-card-cover,
 .jobs-container .jobs-list .first-job .job-card-cover,
@@ -48,19 +95,21 @@
 
 .btn {
   padding: 0.6rem 1rem;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   text-transform: uppercase;
   border-radius: 5px;
   transition: 0.3s;
-  color: #FFF;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }
 .btn:hover {
-  border-color: #FF5200;
-  color: #FF5200;
+  border-color: #ff5200;
+  color: #ff5200;
 }
 .btn-primary {
-  background-color: #FF5200;
-  border-color: #FF5200;
+  background-color: #ff5200;
+  border-color: #ff5200;
 }
 .btn-primary:hover {
   background-color: transparent;
@@ -76,6 +125,9 @@
     font-size: 1rem;
     padding: 1rem 0.8rem;
   }
+}
+.btn-rounded:hover {
+  border-radius: 1rem;
 }
 .btn-lg {
   width: 80%;
@@ -127,7 +179,7 @@ li {
   }
 }
 #main-banner .title-container {
-  color: #FFF;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,16 +222,22 @@ li {
 }
 @media (max-width: 825px) {
   .nav-container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 }
 .nav-container .brand {
-  color: #FFF;
+  color: #fff;
   font-size: 2rem;
   transition: 0.3s;
 }
 .nav-container .brand:hover {
-  color: #FF5200;
+  color: #ff5200;
+}
+@media (max-width: 825px) {
+  .nav-container .brand {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
 }
 .nav-container .topnav {
   overflow: hidden;
@@ -187,7 +245,7 @@ li {
 .nav-container .topnav a {
   float: left;
   display: block;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   padding: 14px 16px;
   margin-left: 10px;
@@ -197,7 +255,7 @@ li {
   transition: 0.3s;
 }
 .nav-container .topnav a:hover {
-  color: #FF5200;
+  color: #ff5200;
 }
 .nav-container .topnav .icon {
   display: none;
@@ -262,7 +320,7 @@ li {
   }
 }
 .services-container .services-card-container .services-card i {
-  color: #FF5200;
+  color: #ff5200;
   font-size: 4rem;
   display: block;
   margin-top: 1rem;
@@ -298,7 +356,7 @@ li {
   }
 }
 .services-container .services-card-container .services-card p {
-  color: #8B8E94;
+  color: #8b8e94;
 }
 @media (max-width: 912px) {
   .services-container .services-card-container .services-card p {
@@ -316,7 +374,7 @@ li {
 }
 
 .jobs-container {
-  background-color: #E5EAFF;
+  background-color: #e5eaff;
   padding: 3rem;
 }
 @media (max-width: 825px) {
@@ -424,7 +482,7 @@ li {
   height: 100%;
   padding-top: 1.75rem;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 3px solid #FF5200;
+  border: 3px solid #ff5200;
 }
 .jobs-container .jobs-list .job-card-title {
   text-align: center;
@@ -451,8 +509,8 @@ li {
 }
 
 footer {
-  background-color: #1D1D1D;
-  color: #8B8E94;
+  background-color: #1d1d1d;
+  color: #8b8e94;
   padding: 5rem 2rem;
 }
 footer .footer-container {
@@ -513,7 +571,7 @@ footer .footer-links-container-list li {
   margin-bottom: 0.5rem;
 }
 footer .footer-links-container-list li a {
-  color: #8B8E94;
+  color: #8b8e94;
   transition: 0.5s;
 }
 footer .footer-links-container-list li a:hover {
@@ -538,41 +596,7 @@ footer .footer-copy-right-container p {
   align-items: center;
 }
 .contact-container form {
-  width: 50%;
-  margin: 2rem;
-  text-align: center;
-  padding: 1.5rem;
   box-shadow: 0 1px 10px #ccc;
-}
-@media (max-width: 825px) {
-  .contact-container form {
-    width: 80%;
-    margin: 2rem;
-  }
-}
-.contact-container form label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1em;
-}
-.contact-container form label span {
-  margin-bottom: 0.3em;
-  font-weight: bold;
-  text-align: left;
-  font-family: "Lato";
-}
-.contact-container form input,
-.contact-container form textarea {
-  box-sizing: border-box;
-  padding: 0.8rem 0;
-  border: none;
-  background-color: transparent;
-}
-.contact-container form input {
-  border-bottom: 1px solid #ccc;
-}
-.contact-container form textarea {
-  border: 1px solid #ccc;
 }
 
 .service-information-container {
@@ -589,7 +613,7 @@ footer .footer-copy-right-container p {
   }
 }
 .service-information-container p {
-  color: #8B8E94;
+  color: #8b8e94;
   text-align: justify;
   font-size: 1.2rem;
 }
@@ -754,7 +778,7 @@ footer .footer-copy-right-container p {
   right: 0;
   transform: rotate(-45deg);
   width: 200px;
-  background: #FF5200;
+  background: #ff5200;
   padding: 10px 0;
   color: #fff;
   text-align: center;
@@ -777,7 +801,7 @@ footer .footer-copy-right-container p {
   color: #fff;
 }
 .service-information-container .cards .wrapper .basic .package-name {
-  background: #ffecb3;
+  background: rgba(67, 239, 139, 0.2);
 }
 .service-information-container .cards .wrapper .basic .package-name::before {
   content: "Basic";
@@ -796,7 +820,7 @@ footer .footer-copy-right-container p {
   color: #fff;
 }
 .service-information-container .cards .wrapper .premium .package-name {
-  background: #ffecb3;
+  background: rgba(255, 82, 0, 0.2);
 }
 .service-information-container .cards .wrapper .premium .package-name::before {
   content: "Premium";
@@ -815,7 +839,7 @@ footer .footer-copy-right-container p {
   color: #fff;
 }
 .service-information-container .cards .wrapper .ultimate .package-name {
-  background: #ffecb3;
+  background: rgba(162, 107, 250, 0.2);
 }
 .service-information-container .cards .wrapper .ultimate .package-name::before {
   content: "Ultimate";
@@ -870,8 +894,6 @@ footer .footer-copy-right-container p {
   width: 80%;
   margin: 0 auto;
   margin-top: 1rem;
-  text-align: center;
-  padding: 1.5rem;
   box-shadow: 0 1px 10px #ccc;
 }
 @media (max-width: 1500px) {
@@ -891,29 +913,6 @@ footer .footer-copy-right-container p {
     width: 95%;
     margin: 0;
   }
-}
-.service-information-container .tela-divided .form-service form label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1em;
-}
-.service-information-container .tela-divided .form-service form label span {
-  margin-bottom: 0.3em;
-  font-weight: bold;
-  text-align: left;
-  font-family: "Lato";
-}
-.service-information-container .tela-divided .form-service form input {
-  box-sizing: border-box;
-  padding: 0.8rem 0;
-  border: none;
-  background-color: transparent;
-}
-.service-information-container .tela-divided .form-service form input {
-  border-bottom: 1px solid #ccc;
-}
-.service-information-container .tela-divided .form-service form textarea {
-  border: 1px solid #ccc;
 }
 .service-information-container .tela-divided .separator {
   display: none;
@@ -974,6 +973,51 @@ footer .footer-copy-right-container p {
 .service-information-container .tela-divided .Tirar-duvidas .btn {
   margin: 1rem auto;
   width: 70%;
+}
+
+.login-container,
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/office.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.login-container form,
+.cadastro-container form {
+  background-color: #fff;
+  box-shadow: 0 1px 10px #555;
+  border-radius: 1rem;
+}
+.login-container form h1,
+.cadastro-container form h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+@media (max-width: 825px) {
+  .login-container form h1,
+  .cadastro-container form h1 {
+    font-size: 1.5rem;
+  }
+}
+.login-container form p,
+.cadastro-container form p {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+@media (max-width: 825px) {
+  .login-container form p,
+  .cadastro-container form p {
+    font-size: 1rem;
+  }
+}
+.login-container form p a,
+.cadastro-container form p a {
+  color: #ff5200;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */
