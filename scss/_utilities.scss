@@ -46,14 +46,26 @@
 }
 
 // responsividade
+@mixin galaxy-fold {
+    @media (max-width: 280px) {
+        @content;
+    }
+}
+
 @mixin mobile {
-    @media (max-width: 804px) {
+    @media (max-width: 825px) {
         @content;
     }
 }
 
 @mixin tablets {
     @media (max-width: 912px) {
+        @content;
+    }
+}
+
+@mixin responsive-personalized($width) {
+    @media (max-width: $width) {
         @content;
     }
 }
