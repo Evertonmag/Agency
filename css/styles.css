@@ -132,6 +132,12 @@
 .btn-lg {
   width: 80%;
 }
+.btn-md {
+  width: 50%;
+}
+.btn-sm {
+  width: 20%;
+}
 
 * {
   margin: 0;
@@ -1018,6 +1024,64 @@ footer .footer-copy-right-container p {
 .cadastro-container form p a {
   color: #ff5200;
   font-weight: bold;
+}
+
+.about-container {
+  margin-top: 8rem;
+}
+.about-container h1 {
+  color: #000;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-left: 1.3rem;
+}
+.about-container .quem-somos-container,
+.about-container .valores-container {
+  padding: 20px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5eaff;
+}
+.about-container .quem-somos-container h2,
+.about-container .valores-container h2 {
+  color: #000;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.about-container .quem-somos-container div,
+.about-container .valores-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-container .quem-somos-container div p,
+.about-container .valores-container div p {
+  margin: 0rem 1rem;
+  text-align: justify;
+}
+.about-container .quem-somos-container div img,
+.about-container .valores-container div img {
+  height: 250px;
+  width: 1000px;
+}
+.about-container .valores-container h2 {
+  color: #000;
+  font-size: 1.7rem;
+}
+.about-container .trabalhe-conosco-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 2rem;
+  padding: 2rem;
+}
+.about-container .trabalhe-conosco-container h2 {
+  color: #000;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
