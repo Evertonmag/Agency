@@ -874,6 +874,10 @@ footer {
             font-size: 2.5rem;
             font-weight: 900;
 
+            @include tablets {
+                font-size: 1.5rem;
+            }
+
             @include mobile {
                 font-size: 1.5rem;
             }
@@ -882,6 +886,10 @@ footer {
         p {
             margin-top: 1.5rem;
             font-size: 1.3rem;
+
+            @include tablets {
+                font-size: 1rem;
+            }
 
             @include mobile {
                 font-size: 1rem;
@@ -897,12 +905,14 @@ footer {
 
 .about-container {
     margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
 
     h1 {
         color: $black;
         font-size: 2.5rem;
-        margin-bottom: 1rem;
-        margin-left: 1.3rem;
+        margin-bottom: 2rem;
+        align-self: center;
     }
 
     .quem-somos-container,
@@ -914,10 +924,30 @@ footer {
         align-items: center;
         background-color: $secondary-bg;
 
+        @include tablets {
+            flex-direction: column;
+            padding: 0 0 1.5rem 0;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            padding: 0 0 1.5rem 0;
+        }
+
         h2 {
             color: $black;
             font-size: 1.7rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+
+            @include tablets {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            @include mobile {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
         }
 
         div {
@@ -925,22 +955,55 @@ footer {
             align-items: center;
             justify-content: center;
 
+            @include tablets {
+                flex-direction: column;
+            }
+
+            @include mobile {
+                flex-direction: column;
+            }
+
             p {
                 margin: 0rem 1rem;
                 text-align: justify;
+
+                @include tablets {
+                    font-size: 1rem;
+                    padding-bottom: 1rem;
+                }
+                @include mobile {
+                    font-size: 1rem;
+                    padding-bottom: 1rem;
+                }
             }
 
             img {
                 height: 250px;
                 width: 1000px;
+
+                @include tablets {
+                    height: 500px;
+                    width: 650px;
+                }
+
+                @include mobile {
+                    height: 200px;
+                    width: 250px;
+                }
             }
         }
     }
 
     .valores-container {
-        h2 {
-            color: $black;
-            font-size: 1.7rem;
+        @include tablets {
+            img {
+                order: 3;
+            }
+        }
+        @include mobile {
+            img {
+                order: 3;
+            }
         }
     }
 
@@ -949,13 +1012,33 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 2rem 2rem;
+        margin: 2rem;
         padding: 2rem;
+
+        @include mobile {
+            margin: 1rem;
+            padding: 0rem;
+        }
+
+        @include tablets {
+            margin: 1rem;
+            padding: 0rem;
+        }
 
         h2 {
             color: $black;
             font-size: 1.7rem;
             margin-bottom: 1.5rem;
+
+            @include tablets {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            @include mobile {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
         }
     }
 }
